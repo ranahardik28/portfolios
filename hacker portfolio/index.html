@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: black;">
+
+    <!-- face detection gif -->
+    <img src="source/fd2.gif" id="faced">
+
+    <!-- access granted alert -->
+    <div class="h-alert">
+        Access Granted
+    </div>
+
+    <!-- detection connection git -->
+    <div class="d-alert">
+        <div class="header-strip">Connecting...</div>
+        <img src="source/detect.gif" class="d-image">
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+
+
+        setTimeout(function () {
+            $('#faced').css('display', 'none')
+            $('.h-alert').css('display', 'block')
+        }, 7000);
+
+        setTimeout(function () {
+            $('.h-alert').css('display', 'none')
+            $('.d-alert').css('display', 'block')
+
+        }, 10000)
+
+        setTimeout(function () {
+            $('.d-alert').css('display', 'none')
+            $('.h-alert').text("Connected")
+            $('.h-alert').css('display', 'block')
+
+        }, 13000)
+
+        setTimeout(function () {
+            $('.h-alert').css('display', 'none')
+            $('.d-image').prop('src', 'source/dow.gif')
+            $('.header-strip').text('Downloading Data...')
+            $('.d-alert').css('display', 'block')
+        }, 15000)
+
+        setTimeout(function () {
+            window.location.href = "file:///D:/py/portfolio/main.html"
+        }, 17000)
+
+
+    });
+</script>
+
+</html>
